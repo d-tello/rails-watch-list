@@ -13,3 +13,11 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "stylesheets/application"
+
+// Internal import
+
+import { toggleMobileNavbar } from '../components/navbar';
+
+document.addEventListener('turbolinks:load', () => {
+  toggleMobileNavbar();
+});
