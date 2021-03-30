@@ -1,6 +1,6 @@
 const toggleMobileNavbar = () => {
-  const navbar = document.querySelector('.header__icon-bar');
-  const menu = document.querySelector('.header__menu');
+  const navbar = document.querySelector('.navbar-icon-bar');
+  const menu = document.querySelector('.navbar-menu');
 
   if (navbar) {
     navbar.addEventListener('click', () => {

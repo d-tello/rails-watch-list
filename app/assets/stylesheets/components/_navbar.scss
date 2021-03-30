@@ -1,4 +1,4 @@
-.header {
+.navbar {
   background: #ffffff;
   position: fixed;
   z-index: 100;
@@ -11,12 +11,12 @@
   transition: all 0.3s ease-out;
 }
 
-.animate__navbar {
+.animate-navbar {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
-.header__logo {
+.navbar-logo {
   color: #4b4e6dff;
   float: left;
   display: block;
@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-.header__icon-bar {
+.navbar-icon-bar {
   float: right;
   padding: 20px;
   display: none;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 
-.header__icon-bar span {
+.navbar-icon-bar span {
   display: block;
   height: 1px;
   width: 25px;
@@ -59,19 +59,19 @@
   transition: .3s ease-in-out;
 }
 
-.header__icon-bar span:nth-child(1) {
+.navbar-icon-bar span:nth-child(1) {
   top: 10px;
 }
 
-.header__icon-bar span:nth-child(2) {
+.navbar-icon-bar span:nth-child(2) {
   top: 20px;
 }
 
-.header__icon-bar span:nth-child(3) {
+.navbar-icon-bar span:nth-child(3) {
   top: 30px;
 }
 
-.header__icon-bar.open span:nth-child(1) {
+.navbar-icon-bar.open span:nth-child(1) {
   top: 18px;
   background: #7aababff;
   -webkit-transform: rotate(135deg);
@@ -80,13 +80,13 @@
   transform: rotate(135deg);
 }
 
-.header__icon-bar.open span:nth-child(2) {
+.navbar-icon-bar.open span:nth-child(2) {
   background: #7aababff;
   opacity: 0;
   left: -60px;
 }
 
-.header__icon-bar.open span:nth-child(3) {
+.navbar-icon-bar.open span:nth-child(3) {
   background: #7aababff;
   top: 18px;
   -webkit-transform: rotate(-135deg);
@@ -95,55 +95,55 @@
   transform: rotate(-135deg);
 }
 
-.header__menu {
+.navbar-menu {
   float: right;
   margin: 0;
   padding: 0;
 }
 
-.header__menu-item {
+.navbar-menu-item {
   display: inline-block;
 }
 
-.header__menu-item a {
+.navbar-menu-item a {
   color: #4b4e6dff;
   display: block;
   padding: 20px;
   text-decoration: none;
 }
 
-.header__menu-item a:hover {
+.navbar-menu-item a:hover {
   color: #4b4e6dff;
   font-weight: 700;
 }
 
 @media (max-width: 767px) {
-  .header {
+  .navbar {
     position: fixed;
     z-index: 100;
     width: 100%;
   }
 
-  .header__icon-bar {
+  .navbar-icon-bar {
     display: block;
   }
 
-  .header__icon-bar span {
+  .navbar-con-bar span {
     background: #4b4e6dff;
   }
 
-  .header__menu {
+  .navbar-menu {
     width: 100%;
     height: 0px;
     overflow: hidden;
   }
 
-  .header__menu-item {
+  .navbar-menu-item {
     display: block;
   }
 
 
-  .header__menu.open {
+  .navbar-menu.open {
     height: 100vh;
     overflow: auto;
   }
