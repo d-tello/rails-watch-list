@@ -19,12 +19,12 @@ def create_seeds
     rating = movie['vote_average'].to_i
     poster_url = "https://image.tmdb.org/t/p/w500#{movie['poster_path']}"
     Movie.create(title: title, overview: overview, rating: rating, poster_url: poster_url)
-    puts "#{title} has been added to the database"
+    puts "#{title} has been added to the database 🎬"
   end
 end
 
 def clear_database
-  puts "\n=> Clearing existing seeds"
+  puts "\n=> Clearing existing seeds 🗑"
   Movie.destroy_all
 end
 
