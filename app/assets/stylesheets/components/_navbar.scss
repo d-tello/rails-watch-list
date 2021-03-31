@@ -133,11 +133,13 @@
 
   .navbar-icon-bar {
     display: block;
+
+    span {
+      background: #4b4e6dff;
+    }
+
   }
 
-  .navbar-con-bar span {
-    background: #4b4e6dff;
-  }
 
   .navbar-menu {
     width: 100%;
