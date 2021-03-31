@@ -1,5 +1,9 @@
 <nav class="navbar animate-navbar">
-  <a href="index.html" class="header__logo"></a>
+  <div class="navbar-logo">
+    <%= link_to root_path do %>
+    <%= image_tag "icon-movie", alt: "Home", size: "40x40" %>
+    <% end %>
+  </div>
   <a href="" class="navbar-icon-bar">
     <span></span>
     <span></span>
@@ -7,6 +11,8 @@
   </a>
   <ul class="navbar-menu animate">
     <li class="navbar-menu-item"><a href="#">My lists</a></li>
-    <li class="navbar-menu-item"> <%= link_to 'New list', new_list_path  %></li>
+    <li class="navbar-menu-item">
+      <%= link_to 'New list', new_list_path  %>
+    </li>
   </ul>
 </nav>
