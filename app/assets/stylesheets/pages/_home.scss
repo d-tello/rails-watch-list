@@ -3,5 +3,9 @@
 body {
   background-color: $p-white;
   color: $rich-black;
-}
+  font-family: $body-font !important;
 
+  h1 {
+    font-family: $headers-font !important;
+  }
+}
