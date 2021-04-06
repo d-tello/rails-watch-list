@@ -1,11 +1,13 @@
 <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
   <% @list.bookmarks.each do |bookmark| %>
-    <div class="bg-white border-2 border-mark rounded-lg">
+    <div class="bg-white border-2 border-mark rounded-lg flex flex-col justify-between">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
      url(<%= bookmark.movie.poster_url %>)">
       </div>
-      <h3 class="p-4 font-bold"><%= bookmark.movie.title %></h3>
-      <p class="p-4 text-gray"><%= bookmark.movie.overview %></p>
+      <div class="h-3/6">
+        <h3 class="p-4 font-bold"><%= bookmark.movie.title %></h3>
+        <p class="p-4 text-gray"><%= bookmark.movie.overview %></p>
+      </div>
       <div class="flex justify-between">
         <p class="p-4"><i class="fas fa-quote-left"></i> <%= bookmark.comment %></p>
         <%= link_to 'delete',  delete_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: 'p-4 text-primary' %>
