@@ -1,7 +1,7 @@
 <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
   <% @list.bookmarks.each do |bookmark| %>
     <div class="bg-white border-2 border-mark rounded-lg">
-      <div class="card-category rounded-lg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
      url(<%= bookmark.movie.poster_url %>)">
       </div>
       <h3><%= bookmark.movie.title %></h3>
