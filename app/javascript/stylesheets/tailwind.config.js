@@ -3,12 +3,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      'primary': '#9381FFFF',
+      'primary': '#a30316',
       'light': '#FBFBFD',
-      'extra': '#FF7B9CFF',
-      'secondary': '#2EBFA5FF',
-      'primary': '#9381FFFF',
-      'dark': '#070600FF',
+      'extra': '#ffba08',
+      'secondary': '#00cc99',
+      'dark': '#070600',
       'white': '#FFFFFF',
       'mark': '#ECE9F2',
       'gray': '#6C7381'
