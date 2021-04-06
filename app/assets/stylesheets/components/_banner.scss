@@ -1,5 +1,6 @@
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), asset-url('banner_home');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("curtain.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 
   h1 {
     color: $white;
