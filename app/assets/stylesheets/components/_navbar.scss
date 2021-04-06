@@ -3,6 +3,10 @@
   position: fixed;
   z-index: 100;
   width: 100%;
+
+  @media (max-width: 767px) {
+    background: $white;
+  }
 }
 
 .navbar-solid {
@@ -27,8 +31,18 @@
   text-decoration: none;
 }
 
+.logo-light {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
 .inactive {
   display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
 }
 
 .navbar-icon-bar {
@@ -69,7 +83,7 @@
     transition: 0.3s ease-in-out;
 
     @media (max-width: 767px) {
-      background: $white;
+      background: $dark;
     }
   }
 }
@@ -138,11 +152,18 @@
     display: block;
     padding: 20px;
     text-decoration: none;
-  }
 
-  a:hover {
-    color: $white;
-    font-weight: 700;
+    @media (max-width: 767px) {
+      color: $dark;
+    }
+    a:hover {
+      color: $white;
+      font-weight: 700;
+
+      @media (max-width: 767px) {
+        color: $dark;
+      }
+    }
   }
 }
 
