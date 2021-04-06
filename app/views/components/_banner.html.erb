@@ -7,4 +7,8 @@
     <h1 class="text-center py-5 text-5xl">Create a new list</h1>
     <p>A Paragraph</p>
   <% end %>
+  <% if params[:controller] == 'lists' && %w(show).include?(params[:action])%>
+    <h1 class="text-center py-5 text-5xl"><%= @list.name %></h1>
+    <p>A Paragraph</p>
+  <% end %>
 </div>
