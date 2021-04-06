@@ -47,6 +47,10 @@
   transition: 0.5s ease-in-out;
   cursor: pointer;
 
+  @media (max-width: 767px) {
+    display: block;
+  }
+
   span {
     display: block;
     height: 1px;
@@ -63,6 +67,10 @@
     -moz-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
+
+    @media (max-width: 767px) {
+      background: $white;
+    }
   }
 }
 
@@ -110,10 +118,20 @@
   float: right;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+  }
 }
 
 .navbar-menu-item {
   display: inline-block;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
 
   a {
     color: $white;
@@ -136,32 +154,8 @@
 }
 
 @media (max-width: 767px) {
-  .navbar {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-  }
-
-  .navbar-icon-bar {
-    display: block;
-
-    span {
-      background: $white;
-    }
-  }
-
   .navbar-icon-bar-solid span {
     background: $dark;
-  }
-
-  .navbar-menu {
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-  }
-
-  .navbar-menu-item {
-    display: block;
   }
 
   .navbar-menu.open {
