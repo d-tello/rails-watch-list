@@ -4,10 +4,12 @@
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
      url(<%= bookmark.movie.poster_url %>)">
       </div>
-      <h3><%= bookmark.movie.title %></h3>
-      <p><%= bookmark.movie.overview %></p>
-      <p><%= bookmark.comment %></p>
-      <%= link_to 'delete',  delete_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <h3 class="p-4 font-bold"><%= bookmark.movie.title %></h3>
+      <p class="p-4 text-gray"><%= bookmark.movie.overview %></p>
+      <div class="flex justify-between">
+        <p class="p-4"><i class="fas fa-quote-left"></i> <%= bookmark.comment %></p>
+        <%= link_to 'delete',  delete_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: 'p-4 text-primary' %>
+      </div>
     </div>
   <% end %>
 </div>
