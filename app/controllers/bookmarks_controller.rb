@@ -1,13 +1,13 @@
 class BookmarksController < ApplicationController
   def create
-    @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.list_id = params[:list_id]
-    @bookmark.movie_id = params[:bookmark][:movie_id]
-
+    @bookmark = Bookmark.new(movie_id: params[:bookmark][:movie_id], list_id: params[:list_id],
+                             comment: params[:bookmark][:comment])
     if @bookmark.save
       redirect_to list_path(params[:list_id]), notice: 'Movie was successfully created.'
     else
-      render 'list/new'
+      @list = List.find(params[:list_id])
+      @bookmarks = @list.bookmarks
+      render 'lists/show'
     end
   end
 
