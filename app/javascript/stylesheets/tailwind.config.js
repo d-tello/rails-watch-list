@@ -9,6 +9,8 @@ module.exports = {
       'secondary': '#2EBFA5FF',
       'primary': '#9381FFFF',
       'dark': '#070600FF',
+      'white': '#FFFFFF',
+      'mark': '#ECE9F2'
     },
     container: {
       center: true,
