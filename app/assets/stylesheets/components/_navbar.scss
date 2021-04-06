@@ -1,8 +1,12 @@
 .navbar {
-  background: $white;
+  background: transparent;
   position: fixed;
   z-index: 100;
   width: 100%;
+}
+
+.navbar-solid {
+  background: $white;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
 }
 
@@ -33,10 +37,10 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 
   span {
@@ -51,10 +55,10 @@
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .3s ease-in-out;
-    -moz-transition: .3s ease-in-out;
-    -o-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 }
 
@@ -71,7 +75,6 @@
     top: 30px;
   }
 }
-
 
 .navbar-icon-bar.open {
   span:nth-child(1) {
@@ -97,7 +100,6 @@
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
   }
-
 }
 
 .navbar-menu {
@@ -110,15 +112,22 @@
   display: inline-block;
 
   a {
-    color: $primary;
+    color: $white;
     display: block;
     padding: 20px;
     text-decoration: none;
   }
 
   a:hover {
-    color: $primary;
+    color: $white;
     font-weight: 700;
+  }
+}
+
+.navbar-menu-item-solid a {
+  color: $dark;
+  &:hover {
+    color: $dark;
   }
 }
 
@@ -133,9 +142,12 @@
     display: block;
 
     span {
-      background: $primary;
+      background: $white;
     }
+  }
 
+  .navbar-icon-bar-solid span {
+    background: $dark;
   }
 
   .navbar-menu {
@@ -147,7 +159,6 @@
   .navbar-menu-item {
     display: block;
   }
-
 
   .navbar-menu.open {
     height: 100vh;

@@ -17,7 +17,9 @@ import "stylesheets/application"
 // Internal import
 
 import { toggleMobileNavbar } from '../components/navbar';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
   toggleMobileNavbar();
+  initUpdateNavbarOnScroll();
 });
