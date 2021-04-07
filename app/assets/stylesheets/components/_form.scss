@@ -1,0 +1,18 @@
+.form-inputs {
+  label {
+    margin-right: 10px;
+  }
+
+  input,
+  select {
+    border: 1px solid $gray;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.bookmark_comment,
+.bookmark_movie {
+  margin: 20px 0px;
+}
