@@ -178,5 +178,6 @@
   .navbar-menu.open {
     height: 100vh;
     overflow: auto;
+    z-index: 101;
   }
 }

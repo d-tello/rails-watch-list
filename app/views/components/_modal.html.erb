@@ -1,9 +1,9 @@
- <button id="openBtn">New list</button>
-<div id="modal" class="hidden modal-bg transition-opacity duration-500 pt-16 fixed w-full h-full left-0 overflow-auto">
-  <div class="modal-content relative m-auto bg-gray-100 w-4/5 shadow-lg">
+ <a class="cursor-pointer" id="openBtn">New list</a>
+<div id="modal" class="hidden modal-bg transition-opacity duration-500 pt-8 fixed w-full h-full left-0 overflow-auto">
+  <div class="bg-light modal-content relative m-auto w-4/5 shadow-lg border-2 border-mark rounded-lg">
     <div class="p-4 bg-gray-700 text-white">
-      <span class="closeBtn float-right text-lg font-bold hover:text-gray-500 no-underline cursor-pointer">&times;</span>
-      <h2>Modal Header</h2>
+      <span class="closeBtn float-right text-gray text-3xl font-bold hover:text-dark no-underline cursor-pointer"><i class="fas fa-window-close"></i></span>
+      <h2 class="text-3xl text-dark text-center">Add a new list to your collection</h2>
     </div>
     <div class="p-4">
       <div class="container mx-auto my-8">
@@ -12,9 +12,6 @@
           <%= f.submit %>
         <% end %>
       </div>
-    </div>
-    <div class="p-4 text-white bg-gray-500">
-      <h3>Modal Footer</h3>
     </div>
   </div>
 </div>
