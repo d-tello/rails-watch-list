@@ -153,16 +153,12 @@
     padding: 20px;
     text-decoration: none;
 
+    &:hover {
+      font-weight: 700;
+    }
+
     @media (max-width: 767px) {
       color: $dark;
-    }
-    a:hover {
-      color: $white;
-      font-weight: 700;
-
-      @media (max-width: 767px) {
-        color: $dark;
-      }
     }
   }
 }
