@@ -10,8 +10,8 @@
 OpenURI::Buffer.send :remove_const, 'StringMax' if OpenURI::Buffer.const_defined?('StringMax')
 OpenURI::Buffer.const_set 'StringMax', 0
 
-def create_seeds
-  data = JSON.parse(open('http://tmdb.lewagon.com/movie/top_rated').read)
+def create_seeds(page_number)
+  data = JSON.parse(open("http://tmdb.lewagon.com/movie/top_rated?page=#{page_number}").read)
 
   data['results'].each do |movie|
     title = movie['title']
@@ -25,8 +25,19 @@ end
 
 def clear_database
   puts "\n=> Clearing existing seeds 🗑"
+  Bookmark.destroy_all
   Movie.destroy_all
 end
 
 clear_database
-create_seeds
+
+def seeds_multi_page
+  page = 1
+  end_page = 430
+  while page <= end_page
+    create_seeds(page)
+    page += 1
+  end
+end
+
+seeds_multi_page
