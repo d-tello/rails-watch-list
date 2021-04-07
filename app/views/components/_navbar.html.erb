@@ -11,9 +11,7 @@
     <span></span>
   </a>
   <ul class="navbar-menu animate">
-    <% if params[:controller] == 'lists' && %w(index).include?(params[:action])%>
-      <li class="navbar-menu-item"><%= render 'components/modal' %></li>
-    <% end %>
+    <li class="navbar-menu-item"><%= render 'components/modal' %></li>
     <li class="navbar-menu-item"><a href="#">Placeholder</a></li>
     <li class="navbar-menu-item"><a href="#">Placeholder</a></li>
   </ul>

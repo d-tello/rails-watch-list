@@ -1,4 +1,9 @@
- <a class="cursor-pointer" id="openBtn">New list</a>
+ <% if params[:controller] == 'lists' && %w(index).include?(params[:action])%>
+  <a class="cursor-pointer" id="openBtn">New list</a>
+<% end %>
+<% if params[:controller] == 'lists' && %w(show).include?(params[:action])%>
+  <a class="cursor-pointer" id="openBtn">Update list name</a>
+<% end %>
 <div id="modal" class="hidden modal-bg transition-opacity duration-500 pt-8 fixed w-full h-full left-0 overflow-auto">
   <div class="bg-light modal-content relative m-auto w-4/5 shadow-lg border-2 border-mark rounded-lg">
     <div class="p-4 bg-gray-700 text-white">
@@ -8,6 +13,8 @@
     <div class="p-4">
       <div class="container mx-auto my-8">
         <%= simple_form_for(@list) do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
           <div class="form-inputs my-3">
             <%= f.input :name %>
           </div>

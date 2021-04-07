@@ -17,9 +17,21 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
 
     if @list.save
-      redirect_to list_path(@list), notice: 'List was successfully created.'
+      redirect_to list_path(@list)
     else
-      render :new
+      @lists = List.all
+      render 'lists/index'
+      raise
+    end
+  end
+
+  def update
+    @list = List.find(params[:id])
+    if @list.update(list_params)
+      redirect_to list_path(@list)
+    else
+      @bookmark = Bookmark.new
+      render 'lists/show'
     end
   end
 
