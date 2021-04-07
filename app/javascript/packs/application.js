@@ -14,6 +14,7 @@ ActiveStorage.start()
 
 import "stylesheets/application"
 import 'select2';
+import "select2/dist/css/select2.css";
 
 
 // Internal import
