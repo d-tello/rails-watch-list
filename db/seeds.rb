@@ -10,7 +10,7 @@
 OpenURI::Buffer.send :remove_const, 'StringMax' if OpenURI::Buffer.const_defined?('StringMax')
 OpenURI::Buffer.const_set 'StringMax', 0
 
-types = [
+genres = [
   { name: 'Action', id: 28 },
   { name: 'Adventure', id: 12 },
   { name: 'Animation', id: 16 },
@@ -58,7 +58,7 @@ def clear_database
   List.destroy_all
 end
 
-def seeds_multi_page(movies_genres)
+def seeds_movies(movies_genres)
   page = 1
   end_page = 2
   while page <= end_page
@@ -67,5 +67,14 @@ def seeds_multi_page(movies_genres)
   end
 end
 
+def seeds_lists(genres_to_generate)
+  puts "\n=> Creating lists... 📝"
+  genres_to_generate.each do |genre|
+    List.create(name: genre[:name])
+    puts "Genre '#{genre[:name]}' added to the database"
+  end
+end
+
 clear_database
-seeds_multi_page(types)
+seeds_movies(genres)
+seeds_lists(genres)
