@@ -10,6 +10,8 @@
   <% if params[:controller] == 'lists' && %w(show).include?(params[:action])%>
     <h1 class="text-center py-5 text-5xl"><%= @list.name %></h1>
     <p>A Paragraph</p>
-    <p class='absolute bottom-0 right-0 bg-extra p-3 mb-4 mr-4 rounded-lg'><%="#{@list.bookmarks.length} #{'movie'.pluralize(@list.bookmarks.length)}" if @list.bookmarks.length > 0 %></p>
+    <% if !@list.bookmarks.empty? %>
+      <p class='absolute bottom-0 right-0 bg-extra p-3 mb-4 mr-4 rounded-lg'><%="#{@list.bookmarks.length} #{'movie'.pluralize(@list.bookmarks.length)}" if @list.bookmarks.length > 0 %></p>
+    <% end %>
   <% end %>
 </div>
