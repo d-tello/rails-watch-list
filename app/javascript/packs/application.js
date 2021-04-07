@@ -21,10 +21,12 @@ import "select2/dist/css/select2.css";
 
 import { toggleMobileNavbar } from '../components/navbar';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { toggleModal } from '../components/modal';
 import { initSelect2 } from '../plugins/initSelect2';
 
 document.addEventListener('turbolinks:load', () => {
   toggleMobileNavbar();
   initUpdateNavbarOnScroll();
   initSelect2();
+  toggleModal();
 });
