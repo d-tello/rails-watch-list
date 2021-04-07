@@ -13,13 +13,17 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "stylesheets/application"
+import 'select2';
+
 
 // Internal import
 
 import { toggleMobileNavbar } from '../components/navbar';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initSelect2 } from '../plugins/initSelect2';
 
 document.addEventListener('turbolinks:load', () => {
   toggleMobileNavbar();
   initUpdateNavbarOnScroll();
+  initSelect2();
 });

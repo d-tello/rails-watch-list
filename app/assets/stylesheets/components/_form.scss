@@ -5,14 +5,30 @@
 
   input,
   select {
-    border: 1px solid $gray;
-    border-radius: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
     width: 100%;
     margin-top: 10px;
+    padding-left: 8px;
   }
 }
 
 .bookmark_comment,
 .bookmark_movie {
   margin: 20px 0px;
+}
+
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: $primary !important;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: $dark !important;
+}
+
+input:focus {
+  outline: 2px solid $primary;
 }
