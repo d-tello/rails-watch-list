@@ -18,7 +18,8 @@ def create_seeds(page_number)
     overview = movie['overview']
     rating = movie['vote_average'].to_i
     poster_url = "https://image.tmdb.org/t/p/w500#{movie['poster_path']}"
-    Movie.create(title: title, overview: overview, rating: rating, poster_url: poster_url)
+    genre = movie['genre_ids'].first
+    Movie.create(title: title, overview: overview, rating: rating, poster_url: poster_url, genre: genre)
     puts "#{title} has been added to the database 🎬"
   end
 end
@@ -34,7 +35,7 @@ clear_database
 
 def seeds_multi_page
   page = 1
-  end_page = 430
+  end_page = 2
   while page <= end_page
     create_seeds(page)
     page += 1
