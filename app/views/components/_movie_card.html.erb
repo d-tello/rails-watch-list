@@ -11,7 +11,7 @@
       </div>
       <div class="flex justify-between">
         <p class="p-4"><i class="fas fa-quote-left"></i> <%= bookmark.comment %></p>
-        <%= link_to 'delete',  delete_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: 'p-4 text-primary' %>
+        <%= link_to 'delete',  delete_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: 'bg-primary py-1 px-4 m-3 rounded-lg text-light cursor-pointer' %>
       </div>
     </div>
   <% end %>
