@@ -75,6 +75,20 @@ def seeds_lists(genres_to_generate)
   end
 end
 
+def seeds_bookmarks
+  lists = List.all
+  movies = Movie.all
+  lists.each do |list|
+    movies.each do |movie|
+      if list.name == movie.genre
+        Bookmark.create(comment: 'Amazing movie!', list_id: list.id, movie_id: movie.id)
+        puts "#{movie.title} added to #{list.name}'s list ✅"
+      end
+    end
+  end
+end
+
 clear_database
 seeds_movies(genres)
 seeds_lists(genres)
+seeds_bookmarks
