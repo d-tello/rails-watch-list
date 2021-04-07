@@ -27,6 +27,7 @@ def clear_database
   puts "\n=> Clearing existing seeds 🗑"
   Bookmark.destroy_all
   Movie.destroy_all
+  List.destroy_all
 end
 
 clear_database
