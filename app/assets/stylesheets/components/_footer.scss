@@ -42,11 +42,16 @@
     opacity: 1;
   }
   @media (max-width: 767px) {
-    margin-bottom: 1rem;
     font-size: 14px;
+  }
+
+  .footer .fa-heart {
+    color: $white;
   }
 }
 
-.footer .fa-heart {
-  color: $white;
+.footer-copyright {
+  @media (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
 }
