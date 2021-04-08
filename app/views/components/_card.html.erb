@@ -2,7 +2,7 @@
   <% @lists.each do |list| %>
     <div>
       <%= link_to list_path(list) do %>
-        <div class="card-category border-2 border-mark rounded-lg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        <div class="card-category md:border-2 border-mark rounded-lg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
      url(<% if list.bookmarks.empty? %>
      <%= 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba'  %>
      <% else %>
