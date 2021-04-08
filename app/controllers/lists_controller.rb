@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
   def index
     @list = List.new
-    @lists = List.all
+    @lists = List.paginate(page: params[:page], per_page: 6)
     @line = home_page_line
   end
 
