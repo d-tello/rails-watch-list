@@ -60,7 +60,7 @@ end
 
 def seeds_movies(movies_genres)
   page = 1
-  end_page = 430
+  end_page = 200
   while page <= end_page
     create_seeds(page, movies_genres)
     page += 1
