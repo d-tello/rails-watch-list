@@ -1,3 +1,5 @@
+![Banner Watch List](https://user-images.githubusercontent.com/71888404/114056162-aa504800-9891-11eb-866b-02b7f24cafaf.png)
+
 ## <a target="_blank" href="https://watch-list-app-demo.herokuapp.com/">Watch List</a>
 
 Rails application for creating bookmarks of favourite films organised according to lists, created by the user himself.
