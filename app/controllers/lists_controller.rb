@@ -21,8 +21,7 @@ class ListsController < ApplicationController
       redirect_to list_path(@list)
     else
       @lists = List.all
-      render 'lists/index'
-      raise
+      redirect_to root_path
     end
   end
 
