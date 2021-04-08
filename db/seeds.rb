@@ -60,21 +60,21 @@ end
 
 def seeds_movies_part_one(movies_genres)
   page = 1
-  end_page = 200
-  while page <= end_page
-    create_seeds(page, movies_genres)
-    page += 1
-  end
-end
-
-def seeds_movies_part_two(movies_genres)
-  page = 201
   end_page = 430
   while page <= end_page
     create_seeds(page, movies_genres)
     page += 1
   end
 end
+
+# def seeds_movies_part_two(movies_genres)
+#   page = 201
+#   end_page = 430
+#   while page <= end_page
+#     create_seeds(page, movies_genres)
+#     page += 1
+#   end
+# end
 
 def seeds_lists(genres_to_generate)
   puts "\n=> Creating lists... 📝"
@@ -97,13 +97,13 @@ def seeds_bookmarks
   end
 end
 
-def reset_database
+def reset_database(data)
   clear_database
-  seeds_lists(genres)
-  seeds_movies_part_one(genres)
-  sleep(1.minute)
-  seeds_movies_part_two(genres)
+  seeds_lists(data)
+  seeds_movies_part_one(data)
+  # sleep(1.minute)
+  # seeds_movies_part_two(data)
   seeds_bookmarks
 end
 
-reset_database
+reset_database(genres)
