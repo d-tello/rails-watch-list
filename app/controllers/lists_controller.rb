@@ -7,6 +7,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmarks = Bookmark.paginate(page: params[:page], per_page: 6).where(list_id: params[:id])
     @bookmark = Bookmark.new
   end
 
