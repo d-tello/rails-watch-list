@@ -1,12 +1,13 @@
 class ListsController < ApplicationController
   def index
     @list = List.new
-    @lists = List.all
+    @lists = List.paginate(page: params[:page], per_page: 6)
     @line = home_page_line
   end
 
   def show
     @list = List.find(params[:id])
+    @bookmarks = Bookmark.paginate(page: params[:page], per_page: 6).where(list_id: params[:id])
     @bookmark = Bookmark.new
   end
 

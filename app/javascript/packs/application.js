@@ -3,30 +3,31 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
+import Rails from "@rails/ujs";
+import Turbolinks from "turbolinks";
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
 
-import "stylesheets/application"
-import 'select2';
+import "stylesheets/application";
+import "select2";
 import "select2/dist/css/select2.css";
-
 
 // Internal import
 
-import { toggleMobileNavbar } from '../components/navbar';
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { toggleModal } from '../components/modal';
-import { initSelect2 } from '../plugins/initSelect2';
+import { toggleMobileNavbar } from "../components/navbar";
+import { initUpdateNavbarOnScroll } from "../components/navbar";
+import { toggleModal } from "../components/modal";
+import { initSelect2 } from "../plugins/initSelect2";
+import { infiniteScroll } from "../plugins/initInfiniteScroll";
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener("turbolinks:load", () => {
   toggleMobileNavbar();
   initUpdateNavbarOnScroll();
   initSelect2();
   toggleModal();
+  infiniteScroll();
 });
