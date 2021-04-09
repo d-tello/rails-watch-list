@@ -1,0 +1,17 @@
+{
+  "background_color": "white",
+  "description": " Rails demo application for creating bookmarks of favourite films organised according to lists, created by the user himself. The user can choose the film to be added to the list from the TMDB database.",
+  "display": "fullscreen",
+  "name": "Watch List",
+  "icons": [
+    <% files = Dir.entries(Rails.root.join("app/assets/images/icons/")).select {|f| !File.directory? f} %>
+    <% files.each_with_index do |file, index| %>
+      <% match = file.match(/.+-(?<size>\d{2,3}x\d{2,3}).png/) %>
+      {
+        "src": "<%= image_path "icons/#{file}" %>",
+        "sizes": "<%= match && match[:size] %>",
+        "type": "image/png"
+      }<%= "," unless (files.size - 1) == index %>
+    <% end %>
+  ]
+}
