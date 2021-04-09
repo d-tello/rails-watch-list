@@ -2,10 +2,12 @@
 
 ## <a target="_blank" href="https://watch-list-app-demo.herokuapp.com/">Watch List</a>
 
-Rails application for creating bookmarks of favourite films organised according to lists, created by the user himself.
+• Rails application for creating bookmarks of favourite films organised according to lists, created by the user himself.
 The user can choose the film to be added to the list from the TMDB database.
 
-Simple and responsive design compatible with small screens, mostly created with Tailwind CSS
+• Simple and responsive design compatible with small screens, mostly created with Tailwind CSS
+
+• <a target="_blank" href="https://infinite-scroll.com/">Infinite Scroll</a>
 
 ## Tech
 
