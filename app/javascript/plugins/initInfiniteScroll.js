@@ -1,3 +1,5 @@
+require("infinite-scroll");
+
 const infiniteScroll = () => {
   let InfiniteScroll = require("infinite-scroll");
   let elem = document.querySelector(".pagination-container");
