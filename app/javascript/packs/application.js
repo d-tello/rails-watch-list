@@ -13,6 +13,7 @@ Turbolinks.start();
 ActiveStorage.start();
 
 require("@client-side-validations/client-side-validations");
+require("@client-side-validations/simple-form");
 
 import "stylesheets/application";
 import "select2";
