@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'autoprefixer-rails'
+gem 'client_side_validations'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 gem 'tailwindcss-rails', '~> 0.3.3'
