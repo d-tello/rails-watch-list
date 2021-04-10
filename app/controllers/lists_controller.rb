@@ -17,13 +17,7 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-
-    if @list.save
-      redirect_to list_path(@list)
-    else
-      @lists = List.all
-      redirect_to root_path
-    end
+    redirect_to list_path(@list) if @list.save
   end
 
   def update
