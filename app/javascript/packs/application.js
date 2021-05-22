@@ -12,6 +12,9 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
+require("@client-side-validations/client-side-validations");
+require("@client-side-validations/simple-form");
+
 import "stylesheets/application";
 import "select2";
 import "select2/dist/css/select2.css";
